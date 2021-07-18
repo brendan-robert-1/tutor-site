@@ -3,5 +3,5 @@
 sudo apt-get install nodejs -y
 mkdir site
 git clone https://github.com/brendan-robert-1/tutor-site.git
-npm install express
+npm install
 node  ./tutor-site/server.js
