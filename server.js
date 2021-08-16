@@ -1,11 +1,11 @@
-var app = require('express')();
-const path = require('path');
-const port = 3000;
+const express = require('express');
 
-app.get('/',function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
-});
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.static('public'));
+
+app.listen(PORT, () => {
+    console.log('Server connected at:', PORT);
 });
