@@ -6,7 +6,7 @@ sudo apt install nodejs
 
 #pm2 
 sudo npm i pm2 -g
-pm2 start server
+pm2 start server.js
 pm2 startup ubuntu
 
 #firewall 
