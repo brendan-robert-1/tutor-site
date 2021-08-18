@@ -343,7 +343,7 @@
 							</div>
 						</div>
 						<div class="text-md-right">
-							<button type="submit" class="site-btn">Send message</button>
+							<button type="submit" id="site-btn" class="site-btn">Send message</button>
 						</div>
 					</form>
 				</div>
@@ -388,8 +388,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 emailjs.sendForm('service_68jaaum', 'template_ghmmefl', this)
                     .then(function() {
                         console.log('SUCCESS!');
+						document.getElementById('site-btn').innerText = "Message Sent!"
                     }, function(error) {
                         console.log('FAILED...', error);
+						document.getElementById('site-btn').innerText = "Message Failed to send! Please try emailing me directly."
                     });
             });
         }
